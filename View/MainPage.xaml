@@ -4,6 +4,51 @@
              x:Class="MyFirstMAUIApp.View.MainPage"
              Title="MainPage">
 
-	<Label Text="Hello, World"/>
+	<VerticalStackLayout>
+
+		<Grid Margin="50, 50, 50, 50">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+			</Grid.RowDefinitions>
+
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+
+			<Button Grid.Row="0"
+					Grid.Column="0"
+					Text="Layout"
+					Style="{StaticResource TileButton}"/>
+
+			<Button Grid.Row="0"
+					Grid.Column="1"
+					Text="Images"
+					Style="{StaticResource TileButton}"/>
+
+			<Button Grid.Row="1"
+					Grid.Column="0"
+					Text="Collections"
+					Style="{StaticResource TileButton}"/>
+
+			<Button Grid.Row="1"
+					Grid.Column="1"
+					Text="Controls"
+					Style="{StaticResource TileButton}"/>
+
+			<Button Grid.Row="2"
+					Grid.ColumnSpan="2"
+					Text="SQL Lite"
+					Style="{StaticResource TileButton}"/>
+			
+			
+			
+	
+			
+		</Grid>
+
+	</VerticalStackLayout>
 	
 </ContentPage>
