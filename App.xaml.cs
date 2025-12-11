@@ -8,8 +8,10 @@ namespace MyFirstMAUIApp
         {
             InitializeComponent();
 
-            //MainPage = new AppShell();
-            MainPage = new MainPage();
+            MainPage = new AppShell();
+
+             //MainPage = new NavigationPage(new MainPage());
+
         }
     }
 }

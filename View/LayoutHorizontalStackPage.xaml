@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstMAUIApp.View.LayoutHorizontalStackPage"
+             Title="{Binding HorizontalStack}">
+
+    <VerticalStackLayout Spacing="20" Padding="20">
+
+        <HorizontalStackLayout HorizontalOptions="Start">
+            <BoxView WidthRequest="100"
+                     HeightRequest="100"
+                     Color="Red"/>
+        </HorizontalStackLayout>
+
+
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <BoxView WidthRequest="100"
+                     HeightRequest="100"
+                     Color="Green"/>
+        </HorizontalStackLayout>
+
+
+        <HorizontalStackLayout HorizontalOptions="Start">
+            <BoxView WidthRequest="100"
+                     HeightRequest="100"
+                     Color="Blue"/>
+        </HorizontalStackLayout>
+
+
+        <HorizontalStackLayout HorizontalOptions="End">
+            <BoxView WidthRequest="100"
+                     HeightRequest="100"
+                     Color="Purple"/>
+        </HorizontalStackLayout>
+
+
+    </VerticalStackLayout>
+
+</ContentPage>

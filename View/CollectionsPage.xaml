@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstMAUIApp.View.CollectionsPage"
+             Title="{Binding Title}">
+    <VerticalStackLayout>
+
+        <Grid Margin="50, 50, 50, 50">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Row="0"
+		            Grid.Column="0"
+                    Grid.ColumnSpan="2"
+		            Text="{Binding Collection}"
+		            Style="{StaticResource TileButton}"
+                     Command="{Binding CollectionClickedCommand}"/>
+
+
+            <Button Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Text="{Binding CollectionImages}"
+                    Style="{StaticResource TileButton}"
+                    Command="{Binding CollectionImagesClickedCommand}"/>
+
+
+            <Button Grid.Row="2"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Text="{Binding CollectionButtons}"
+                    Style="{StaticResource TileButton}"/>
+
+
+            <Button Grid.Row="3"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Text="{Binding CollectionIcons}"
+                    Style="{StaticResource TileButton}"/>
+
+
+
+
+
+        </Grid>
+
+
+    </VerticalStackLayout>
+</ContentPage>

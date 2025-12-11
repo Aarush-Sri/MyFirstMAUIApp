@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyFirstMAUIApp.View.MainPage"
-             Title="MainPage">
+             Title="{Binding Title}">
 
 	<VerticalStackLayout>
 
@@ -20,32 +20,31 @@
 
 			<Button Grid.Row="0"
 					Grid.Column="0"
-					Text="Layout"
-					Style="{StaticResource TileButton}"/>
+					Text="{Binding Layouts}"
+					Style="{StaticResource TileButton}"
+                    Command="{Binding LayoutsClickedCommand}"/>
 
 			<Button Grid.Row="0"
 					Grid.Column="1"
-					Text="Images"
-					Style="{StaticResource TileButton}"/>
+					Text="{Binding Images}"
+					Style="{StaticResource TileButton}"
+                    Command="{Binding ImagesClickedCommand}"/>
 
 			<Button Grid.Row="1"
 					Grid.Column="0"
-					Text="Collections"
-					Style="{StaticResource TileButton}"/>
+					Text="{Binding Collections}"
+					Style="{StaticResource TileButton}"
+                    Command="{Binding CollectionsClickedCommand}"/>
 
 			<Button Grid.Row="1"
 					Grid.Column="1"
-					Text="Controls"
+					Text="{Binding Controls}"
 					Style="{StaticResource TileButton}"/>
 
 			<Button Grid.Row="2"
 					Grid.ColumnSpan="2"
-					Text="SQL Lite"
+					Text="{Binding SQLLite}"
 					Style="{StaticResource TileButton}"/>
-			
-			
-			
-	
 			
 		</Grid>
 

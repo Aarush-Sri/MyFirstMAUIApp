@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstMAUIApp.View.LayoutsPage"
+             Title="{Binding Layout}">
+    
+    <VerticalStackLayout>
+
+        <Grid Margin="50, 50, 50, 50">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Row="0"
+			        Grid.Column="0"
+                    Grid.ColumnSpan="2"
+			        Text="{Binding StackLayout}"
+			        Style="{StaticResource TileButton}"
+                    Command="{Binding StackLayoutClickedCommand}"/>
+
+
+            <Button Grid.Row="1"
+		            Grid.Column="0"
+		            Text="{Binding VerticalStack}"
+		            Style="{StaticResource TileButton}"
+                    Command="{Binding VerticalStackLayoutClickedCommand}"/>
+
+            <Button Grid.Row="1"
+                    Grid.Column="1"
+                    Text="{Binding HorizontalStack}"
+                    Style="{StaticResource TileButton}"
+                    Command="{Binding HorizontalStackLayoutClickedCommand}"/>
+
+            <Button Grid.Row="2"
+                    Grid.Column="0"
+                    Text="{Binding AbsoluteLayout}"
+                    Command="{Binding AbsoluteLayoutClickedCommand}"
+                    Style="{StaticResource TileButton}"/>
+
+            <Button Grid.Row="2"
+                    Grid.Column="1"
+                    Text="{Binding FlexLayout}"
+                    Style="{StaticResource TileButton}"
+                    Command="{Binding FlexLayoutClickedCommand}"/>
+
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

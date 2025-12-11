@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                     x:Class="MyFirstMAUIApp.View.LayoutsAbsolutePage"
+                     Title="{Binding Absolute}">
+
+    <AbsoluteLayout>
+
+        <FlexLayout JustifyContent="Center"
+                    AbsoluteLayout.LayoutBounds="0, 0, 1, 0.1"
+                    AbsoluteLayout.LayoutFlags="All"    >
+
+            <Label Text="Absolute!"
+                   FontSize="25"
+                   FontAttributes="Bold"/>
+
+        </FlexLayout>
+
+
+
+
+        <Grid AbsoluteLayout.LayoutBounds="25, 80, 85, 45"
+              AbsoluteLayout.LayoutFlags="None"
+              Margin="0, 0, 15, 0">
+
+            <BoxView Color="Green"/>
+
+            <Label Text="01"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontSize="20"/>
+
+        </Grid>
+
+
+
+        <Grid
+              AbsoluteLayout.LayoutBounds="125, 80, 85, 45"
+              AbsoluteLayout.LayoutFlags="None"
+              Margin="0, 0, 15, 0">
+
+            <BoxView Color="Red"/>
+
+            <Label Text="02"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="20"/>
+
+        </Grid>
+
+
+        <Grid
+              AbsoluteLayout.LayoutBounds="225, 80, 85, 45"
+              AbsoluteLayout.LayoutFlags="None"
+              Margin="0, 0, 15, 0">
+
+            <BoxView Color="PeachPuff"/>
+
+            <Label Text="03"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="20"/>
+
+        </Grid>
+
+        <Grid
+              AbsoluteLayout.LayoutBounds="325, 80, 85, 45"
+              AbsoluteLayout.LayoutFlags="None"
+              Margin="0, 0, 15, 0">
+
+            <BoxView Color="LightBlue"/>
+
+            <Label Text="04"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="20"/>
+
+        </Grid>
+
+
+
+
+
+        <Grid
+               AbsoluteLayout.LayoutBounds="25, 165, 85, 45"
+               AbsoluteLayout.LayoutFlags="None"
+               Margin="0, 0, 15, 0">
+
+            <BoxView Color="LightSeaGreen"/>
+
+            <Label Text="05"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center"
+                 FontSize="20"/>
+
+        </Grid>
+
+
+        <Grid
+       AbsoluteLayout.LayoutBounds="125, 165, 85, 45"
+       AbsoluteLayout.LayoutFlags="None"
+       Margin="0, 0, 15, 0">
+
+            <BoxView Color="yellow"/>
+
+            <Label Text="06"
+         HorizontalOptions="Center"
+         VerticalOptions="Center"
+         FontSize="20"/>
+
+        </Grid>
+
+
+        <Grid
+       AbsoluteLayout.LayoutBounds="225, 165, 85, 45"
+       AbsoluteLayout.LayoutFlags="None"
+       Margin="0, 0, 15, 0">
+
+            <BoxView Color="LightGray"/>
+
+            <Label Text="07"
+         HorizontalOptions="Center"
+         VerticalOptions="Center"
+         FontSize="20"/>
+
+        </Grid>
+
+        <Grid
+           AbsoluteLayout.LayoutBounds="325, 165, 85, 45"
+           AbsoluteLayout.LayoutFlags="None"
+           Margin="0, 0, 15, 0">
+
+            <BoxView Color="LightPink"/>
+
+            <Label Text="08"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontSize="20"/>
+
+        </Grid>
+
+
+
+        <Grid
+       AbsoluteLayout.LayoutBounds="425, 165, 85, 45"
+       AbsoluteLayout.LayoutFlags="None"
+       Margin="0, 0, 15, 0">
+
+            <BoxView Color="LightGreen"/>
+
+            <Label Text="08"
+         HorizontalOptions="Center"
+         VerticalOptions="Center"
+         FontSize="20"/>
+
+        </Grid>
+
+
+
+
+
+
+        <Grid
+       AbsoluteLayout.LayoutBounds="25, 250, 85, 45"
+       AbsoluteLayout.LayoutFlags="None"
+       Margin="0, 0, 15, 0">
+
+            <BoxView Color="LimeGreen"/>
+
+            <Label Text="09"
+         HorizontalOptions="Center"
+         VerticalOptions="Center"
+         FontSize="20"/>
+
+        </Grid>
+
+        <Grid
+       AbsoluteLayout.LayoutBounds="125, 250, 85, 45"
+       AbsoluteLayout.LayoutFlags="None"
+       Margin="0, 0, 15, 0">
+
+            <BoxView Color="Teal"/>
+
+            <Label Text="10"
+         HorizontalOptions="Center"
+         VerticalOptions="Center"
+         FontSize="20"/>
+
+        </Grid>
+
+
+        <Grid
+       AbsoluteLayout.LayoutBounds="225, 250, 85, 45"
+       AbsoluteLayout.LayoutFlags="None"
+       Margin="0, 0, 15, 0">
+
+            <BoxView Color="DarkGreen"/>
+
+            <Label Text="11"
+         HorizontalOptions="Center"
+         VerticalOptions="Center"
+         FontSize="20"/>
+
+        </Grid>
+
+
+        <Grid
+       AbsoluteLayout.LayoutBounds="325, 250, 85, 45"
+       AbsoluteLayout.LayoutFlags="None"
+       Margin="0, 0, 15, 0">
+
+            <BoxView Color="CadetBlue"/>
+
+            <Label Text="12"
+         HorizontalOptions="Center"
+         VerticalOptions="Center"
+         FontSize="20"/>
+
+        </Grid>
+
+
+
+    </AbsoluteLayout>
+
+</ContentPage>
