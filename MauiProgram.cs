@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using CommunityToolkit.Maui;
+using MyFirstMAUIApp.ViewModel;
+using MyFirstMAUIApp.View;
 
 namespace MyFirstMAUIApp
 {
@@ -15,6 +17,10 @@ namespace MyFirstMAUIApp
             }).UseMauiCommunityToolkit();
 #if DEBUG
             builder.Logging.AddDebug();
+
+            builder.Services.AddSingleton<UpdatableCollectionViewModel>();
+            builder.Services.AddSingleton<UpdatableCollectionWButtonsPage>();
+            builder.Services.AddSingleton<CollectionsWIcons>();
 #endif
             return builder.Build();
         }

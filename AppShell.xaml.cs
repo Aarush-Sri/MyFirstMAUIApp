@@ -34,6 +34,17 @@
 
             Routing.RegisterRoute(nameof(CollectionImagesPage), typeof(CollectionImagesPage));
 
+            Routing.RegisterRoute(nameof(UpdatableCollectionWButtonsPage), typeof(UpdatableCollectionWButtonsPage));
+            Routing.RegisterRoute(nameof(EditCollectionPage), typeof(EditCollectionPage));
+            Routing.RegisterRoute(nameof(AddCollectionPage), typeof(AddCollectionPage));
+
+
+            Routing.RegisterRoute(nameof(CollectionsWIcons), typeof(CollectionsWIcons));
+
+
+
+
+
 
 
 

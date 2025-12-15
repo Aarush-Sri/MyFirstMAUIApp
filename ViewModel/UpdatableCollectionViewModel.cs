@@ -14,7 +14,7 @@ using MAUIFirstMobileApp.Models.Messages;
 
 namespace MyFirstMAUIApp.ViewModel
 {
-    public partial class UpdateableCollectionViewModel : ObservableObject
+    public partial class UpdatableCollectionViewModel : ObservableObject
     {
         // flag for pull-to-refresh
         [ObservableProperty] private bool isBusy;
@@ -26,7 +26,7 @@ namespace MyFirstMAUIApp.ViewModel
         [ObservableProperty]
         private ObservableCollection<MarvelMovies> movieCollection = new();
 
-        public UpdateableCollectionViewModel()
+        public UpdatableCollectionViewModel()
         {
 
             // central listener for any UpdateMovieMessage

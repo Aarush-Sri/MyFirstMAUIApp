@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:MyFirstMAUIApp.Model.Entities"
+             x:Class="MyFirstMAUIApp.View.UpdatableCollectionWButtonsPage"
+             Title="{Binding Title}">
+
+    <!-- Style for button spacing -->
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="10" />
+        </Style>
+    </ContentPage.Resources>
+
+    <!-- Add Button will display on the TOP RIGHT of the page -->
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" x:Name="Addbtn" Command="{Binding AddCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <!-- Use Grid instead of Layouts -->
+    <Grid RowDefinitions="Auto, Auto, *" ColumnDefinitions="*">
+
+        <!-- Title -->
+        <FlexLayout Grid.Row="0" Direction="Column" AlignItems="Center">
+            <Label Text="Movies" FontSize="50"
+                   FontAttributes="Bold, Italic"
+                   TextColor="CadetBlue" />
+        </FlexLayout>
+
+        <!-- Divider -->
+        <BoxView Grid.Row="1" HeightRequest="2" BackgroundColor="#000000" />
+
+        <!-- Collection with refresh -->
+        <RefreshView Grid.Row="2"
+                     IsRefreshing="{Binding IsBusy, Mode=TwoWay}"
+                     Command="{Binding RefreshCommand}">
+
+            <CollectionView x:Name="ItemsCollectionView"
+                            ItemsSource="{Binding MovieCollection, Mode=TwoWay}"
+                            SelectionMode="None"
+                            ItemsLayout="VerticalList">
+
+                <CollectionView.ItemTemplate>
+
+                    <DataTemplate x:DataType="model:MarvelMovies">
+                        <Grid RowDefinitions="Auto, 2"
+                              ColumnDefinitions="*, Auto">
+
+                            <!-- Movie title -->
+                            <Label Grid.Row="0" Grid.Column="0"
+                                   Text="{Binding NameofMovie, Mode=TwoWay}"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Start"
+                                   TextColor="Black"
+                                   FontSize="Medium"
+                                   Margin="10,0,0,0" />
+
+                            <!-- Buttons -->
+                            <HorizontalStackLayout Grid.Row="0" Grid.Column="1" Spacing="10">
+                                <Button Text="Update"
+                                        Command="{Binding Path=BindingContext.UpdateCommand, Source={x:Reference ItemsCollectionView}}"
+                                        CommandParameter="{Binding .}"
+                                        TextTransform="None" />
+
+                                <Button Text="Delete"
+                                        Command="{Binding Path=BindingContext.DeleteCommand, Source={x:Reference ItemsCollectionView}}"
+                                        CommandParameter="{Binding .}"
+                                        TextTransform="None" />
+                            </HorizontalStackLayout>
+
+                            <!-- Divider -->
+                            <BoxView Grid.Row="1" Grid.ColumnSpan="2"
+                                     HeightRequest="2"
+                                     BackgroundColor="LightGray" />
+                        </Grid>
+                    </DataTemplate>
+
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+        </RefreshView>
+    </Grid>
+</ContentPage>

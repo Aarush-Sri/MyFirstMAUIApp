@@ -1,5 +1,6 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Microsoft.Extensions.DependencyInjection;
 using MyFirstMAUIApp.Model.Titles;
 using MyFirstMAUIApp.View;
 using System.Threading.Tasks;
@@ -37,6 +38,22 @@ namespace MyFirstMAUIApp.ViewModel
         {
 
             await Shell.Current.GoToAsync(nameof(CollectionImagesPage));
+        }
+
+        [RelayCommand]
+        private async Task CollectionWButtonsClicked()
+        {
+
+            await Shell.Current.GoToAsync(nameof(UpdatableCollectionWButtonsPage));
+
+        }
+
+        [RelayCommand]
+        private async Task CollectionWIconsClicked()
+        {
+
+            await Shell.Current.GoToAsync(nameof(CollectionsWIcons));
+
         }
 
     }

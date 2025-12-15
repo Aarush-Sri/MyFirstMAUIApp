@@ -38,14 +38,16 @@
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
                     Text="{Binding CollectionButtons}"
-                    Style="{StaticResource TileButton}"/>
+                    Style="{StaticResource TileButton}"
+                    Command="{Binding CollectionWButtonsClickedCommand}"/>
 
 
             <Button Grid.Row="3"
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
                     Text="{Binding CollectionIcons}"
-                    Style="{StaticResource TileButton}"/>
+                    Style="{StaticResource TileButton}"
+                    Command="{Binding CollectionWIconsClickedCommand}"/>
 
 
 
