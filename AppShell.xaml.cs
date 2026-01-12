@@ -42,6 +42,15 @@
             Routing.RegisterRoute(nameof(CollectionsWIcons), typeof(CollectionsWIcons));
 
 
+            Routing.RegisterRoute(nameof(ControlsPage), typeof(ControlsPage));
+            Routing.RegisterRoute(nameof(SliderPage), typeof(SliderPage));
+            Routing.RegisterRoute(nameof(SliderPageXAML), typeof(SliderPageXAML));
+            Routing.RegisterRoute(nameof(SLiderPageVM), typeof(SLiderPageVM));
+
+
+
+
+
 
 
 

@@ -57,12 +57,12 @@
 
                             <!-- Buttons -->
                             <HorizontalStackLayout Grid.Row="0" Grid.Column="1" Spacing="10">
-                                <Button Text="Update"
+                                <Button ImageSource="iconsedit.png"
                                         Command="{Binding Path=BindingContext.UpdateCommand, Source={x:Reference ItemsCollectionView}}"
                                         CommandParameter="{Binding .}"
                                         TextTransform="None" />
 
-                                <Button Text="Delete"
+                                <Button ImageSource="iconsdelete.png"
                                         Command="{Binding Path=BindingContext.DeleteCommand, Source={x:Reference ItemsCollectionView}}"
                                         CommandParameter="{Binding .}"
                                         TextTransform="None" />

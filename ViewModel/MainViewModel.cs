@@ -59,7 +59,7 @@ namespace MyFirstMAUIApp.ViewModel
         [RelayCommand]
         private async Task ControlsClicked()
         {
-            // await Shell.Current.GoToAsync(nameof(ControlsPage));
+             await Shell.Current.GoToAsync(nameof(ControlsPage));
         }
 
         [RelayCommand]
