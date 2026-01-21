@@ -12,6 +12,15 @@ namespace MyFirstMAUIApp.ViewModel
       
         public string Slider => ControlsTitles.Slider;
 
+        public string Stepper => ControlsTitles.Stepper;
+
+        public string Switch => ControlsTitles.Switch;
+
+        public string EntryText => ControlsTitles.EntryText;
+
+
+
+
 
         public ControlsVM()
         {
@@ -25,7 +34,29 @@ namespace MyFirstMAUIApp.ViewModel
             await Shell.Current.GoToAsync(nameof(SliderPage));
         }
 
-        
+        [RelayCommand]
+        private async Task StepperClicked()
+        {
+
+            await Shell.Current.GoToAsync(nameof(StepperPage));
+        }
+
+        [RelayCommand]
+        private async Task SwitchClicked()
+        {
+
+            await Shell.Current.GoToAsync(nameof(SwitchPage));
+        }
+
+
+        [RelayCommand]
+        private async Task EntryTextClicked()
+        {
+
+            await Shell.Current.GoToAsync(nameof(EntryPage));
+        }
+
+
 
 
     }

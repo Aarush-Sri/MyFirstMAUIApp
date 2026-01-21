@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyFirstMAUIApp.View.ControlsPage"
+             x:Class="MyFirstMAUIApp.View.StepperPage"
              Title="{Binding Title}">
-   
     <VerticalStackLayout>
-        
+
         <Grid Margin="50, 50, 50, 50">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -19,33 +18,20 @@
             </Grid.ColumnDefinitions>
 
             <Button Grid.Row="0"
-			    Grid.Column="0"
-			    Text="{Binding Slider}"
-			    Style="{StaticResource TileButton}"
-                Command="{Binding SliderClickedCommand}"/>
+                    Grid.Column="0"
+                    Text="{Binding Xaml}"
+                    Style="{StaticResource TileButton}"
+                    Command="{Binding StepperXAMLClickedCommand}"/>
 
 
             <Button Grid.Row="0"
                     Grid.Column="1"
-                    Text="{Binding Stepper}"
+                    Text="{Binding Vm}"
                     Style="{StaticResource TileButton}"
-                    Command="{Binding StepperClickedCommand}"/>
-
-
-            <Button Grid.Row="1"
-                    Grid.Column="0"
-                    Text="{Binding Switch}"
-                    Style="{StaticResource TileButton}"
-                    Command="{Binding SwitchClickedCommand}"/>
-
-
-            <Button Grid.Row="1"
-                     Grid.Column="1"
-                     Text="{Binding EntryText}"
-                     Style="{StaticResource TileButton}"
-                     Command="{Binding EntryTextClickedCommand}"/>
+                    Command="{Binding StepperVMClickedCommand}"/>
 
 
         </Grid>
+
     </VerticalStackLayout>
 </ContentPage>

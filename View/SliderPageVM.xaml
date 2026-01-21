@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyFirstMAUIApp.View.SLiderPageVM"
-             Title="SliderPageVM">
+             Title="{Binding Name}">
     <VerticalStackLayout>
 
         <BoxView WidthRequest="400"
@@ -10,7 +10,7 @@
                 Color="Black"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
-                Margin="0, 0, 0, 0"
+                Margin="0, 0, 0, 25"
                 Opacity="{Binding Opacity}"/>
 
         <Slider Minimum="0" Maximum="1" Value="{Binding Opacity}"
@@ -18,9 +18,17 @@
                 HorizontalOptions="Fill" />
 
 
-        <Label FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center"/>
+        <Label Text="{Binding Text}" FontAttributes="Bold" FontSize="Medium" TextColor="Black" HorizontalOptions="Center" Margin="0, 0, 0, 20"/>
 
-        <Label Text="{Binding Text}" FontAttributes="Bold" FontSize="Medium" TextColor="Black" HorizontalOptions="Center"/>
+
+        <Label Text="Moving Slider will change opacity" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Center" Margin="0, 0, 0, 20" />
+
+        
+        
+        <Button Text="Set Opacity to 50%"
+                Style="{StaticResource TileButton}"
+                Command="{Binding SetCommand}"
+                HorizontalOptions="Center"/>
 
     </VerticalStackLayout>
 </ContentPage>

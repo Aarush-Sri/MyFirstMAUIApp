@@ -24,7 +24,7 @@ public partial class SliderPageXAML : ContentPage
     {
         MyBox.Opacity = value;
         ValueLabel.Text = $"Opacity: {value:F2}";
-        InfoLabel.Opacity = value;
+        //InfoLabel.Opacity = value;
 
     }
 

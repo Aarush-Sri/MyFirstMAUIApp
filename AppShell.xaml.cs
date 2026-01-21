@@ -47,6 +47,23 @@
             Routing.RegisterRoute(nameof(SliderPageXAML), typeof(SliderPageXAML));
             Routing.RegisterRoute(nameof(SLiderPageVM), typeof(SLiderPageVM));
 
+            Routing.RegisterRoute(nameof(StepperPage), typeof(StepperPage));
+            Routing.RegisterRoute(nameof(StepperXAMLPage), typeof(StepperXAMLPage));
+            Routing.RegisterRoute(nameof(StepperVMPage), typeof(StepperVMPage));
+
+            Routing.RegisterRoute(nameof(SwitchPage), typeof(SwitchPage));
+            Routing.RegisterRoute(nameof(SwitchXAMLPage), typeof(SwitchXAMLPage));
+            Routing.RegisterRoute(nameof(SwitchVMPage), typeof(SwitchVMPage));
+
+
+            Routing.RegisterRoute(nameof(EntryPage), typeof(EntryPage));
+            Routing.RegisterRoute(nameof(EntryTextResultsPage), typeof(EntryTextResultsPage));
+
+
+
+
+
+
 
 
 
